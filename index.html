@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Free Fire - HS Pescoço</title>
+
+<style>
+*{
+  box-sizing:border-box;
+  font-family:Arial,sans-serif;
+}
+
+body{
+  margin:0;
+  min-height:100vh;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  background:
+    radial-gradient(circle at top,#352000,#080808 65%);
+  color:#fff;
+}
+
+.panel{
+  width:350px;
+  padding:24px;
+  border-radius:22px;
+  background:#101010;
+  border:1px solid #ffb300;
+  box-shadow:0 0 35px rgba(255,179,0,.25);
+}
+
+.title{
+  text-align:center;
+  font-size:28px;
+  font-weight:bold;
+  color:#ffbd19;
+}
+
+.subtitle{
+  text-align:center;
+  color:#999;
+  margin:6px 0 25px;
+}
+
+.status{
+  text-align:center;
+  padding:13px;
+  border-radius:12px;
+  background:#191919;
+  margin-bottom:18px;
+}
+
+.feature{
+  padding:17px;
+  border-radius:14px;
+  background:#1b1b1b;
+  border:1px solid #292929;
+  margin-bottom:18px;
+}
+
+.feature strong{
+  display:block;
+  font-size:17px;
+}
+
+.feature span{
+  display:block;
+  margin-top:6px;
+  color:#888;
+  font-size:13px;
+}
+
+button{
+  width:100%;
+  padding:16px;
+  border:0;
+  border-radius:14px;
+  background:#ffb300;
+  color:#111;
+  font-size:17px;
+  font-weight:bold;
+  cursor:pointer;
+  transition:.2s;
+}
+
+button:active{
+  transform:scale(.96);
+}
+
+button.ativo{
+  background:#24d477;
+}
+
+#mensagem{
+  text-align:center;
+  margin-top:15px;
+  color:#aaa;
+  font-size:13px;
+}
+</style>
+</head>
+
+<body>
+
+<div class="panel">
+
+  <div class="title">🔥 FREE FIRE</div>
+  <div class="subtitle">Painel Digital HS</div>
+
+  <div class="status">
+    Status:
+    <strong id="status">DESATIVADO</strong>
+  </div>
+
+  <div class="feature">
+    <strong>🎯 HS Pescoço</strong>
+    <span>Função demonstrativa do painel</span>
+  </div>
+
+  <button id="botao" onclick="digitalHS()">
+    🔘 DIGITAL HS PESCOÇO
+  </button>
+
+  <div id="mensagem">
+    Aguardando ativação...
+  </div>
+
+</div>
+
+<script>
+function digitalHS(){
+
+  const status =
+    document.getElementById("status");
+
+  const botao =
+    document.getElementById("botao");
+
+  const mensagem =
+    document.getElementById("mensagem");
+
+  status.textContent = "ATIVO";
+  status.style.color = "#24d477";
+
+  botao.textContent =
+    "✓ HS PESCOÇO ATIVADO";
+
+  botao.classList.add("ativo");
+
+  mensagem.textContent =
+    "Função ativada no painel demonstrativo.";
+}
+</script>
+
+</body>
+</html>
